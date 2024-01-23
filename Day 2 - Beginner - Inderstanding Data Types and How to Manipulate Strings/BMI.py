@@ -2,11 +2,9 @@
 height = input()
 weight = input()
 
-print(int(height))
-print(int(weight))
+weighy_as_int = int(weight)
+height_as_int = float(height)
 
-BMI = weight / height**2
+bmi = weighy_as_int / height_as_int ** 2
 
-print(type(BMI))
-
-print(BMI)
+print( bmi )
