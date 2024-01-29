@@ -31,12 +31,15 @@ def main():
                   pass
               else: 
                   print("[+] Subdominio Descubierto: " + url)
-
+          # Recorremos la lista
           for subdominio in wordlist:
+            # armamos la url a probar
             url = "https://" + subdominio + "." + parser.target
             try:
+                # Respuesta 200
                 requests.get(url)
             except requests.ConnectionError:
+                # si el estado es un Error no hacemos nada
                 pass
             else:
                 print("[+] Subdominio Descubierto: " + url)
